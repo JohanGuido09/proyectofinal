@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglas del Hotel - Hotel SQLuxe</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='rghlstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.JPG') }}" alt="Hotel SQLuxe">
+            <span>Hotel SQLUXE</span>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Habitaciones</a>
+        <a href="#">Contacto</a>
+    </nav>
+    </header>
+    <main>
+        <div class="rules-container">
+            <div class="rule">
+                <h2>Reglas Generales</h2>
+                <div class="rule-content">
+                    <ul>
+                        <li>El check-in se realiza a partir de las 15:00 horas y el check-out debe efectuarse antes de las 11:00 horas.</li>
+                        <li>Se requiere una identificación válida al momento del check-in.</li>
+                        <li>El hotel se reserva el derecho de rechazar el alojamiento a cualquier persona que no cumpla con las políticas del hotel.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>Política de Mascotas</h2>
+                <div class="rule-content">
+                    <ul>
+                        <li>Las mascotas son bienvenidas bajo petición. Se aplican cargos adicionales.</li>
+                        <li>Las mascotas deben estar siempre bajo control y no pueden estar solas en las habitaciones.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>Comportamiento en el Hotel</h2>
+                <div class="rule-content">
+                    <ul>
+                        <li>Se espera que todos los huéspedes respeten a los demás y mantengan un comportamiento apropiado en todas las áreas del hotel.</li>
+                        <li>Está prohibido fumar en las habitaciones y en las áreas comunes del hotel.</li>
+                        <li>Cualquier daño a la propiedad del hotel será cobrado al huésped responsable.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>Uso de Instalaciones</h2>
+                <div class="rule-content">
+                    <ul>
+                        <li>Las instalaciones del hotel, como la piscina y el gimnasio, están disponibles para todos los huéspedes. Por favor, respeta las horas de funcionamiento.</li>
+                        <li>Los niños menores de 12 años deben estar acompañados por un adulto en las áreas de la piscina.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>Política de Cancelación</h2>
+                <div class="rule-content">
+                    <ul>
+                        <li>Las cancelaciones deben realizarse al menos 24 horas antes de la llegada para evitar cargos.</li>
+                        <li>Consulta los términos específicos de tu reserva para más detalles.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>Políticas de Seguridad</h2>
+                <div class="rule-content">
+                    <ul>
+                        <li>El hotel no se hace responsable por la pérdida de objetos de valor dejados en las habitaciones.</li>
+                        <li>En caso de emergencia, sigue las instrucciones del personal del hotel y utiliza las salidas de emergencia designadas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe-container">
+            <aside class="sidebar">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Servicios</li>
+                    <li>Nosotros</li>
+                    <li>Habitaciones</li>
+                    <li>Contacto</li>
+                </ul>
+                <div class="social-media">
+                    <img src="{{ url_for('static', filename='images/Facebook.png') }}" alt="fb">
+                    <img src="{{ url_for('static', filename='images/Youtube.png') }}" alt="yt">
+                    <img src="{{ url_for('static', filename='images/Whatsapp.png') }}" alt="whats">
+                </div>
+            </aside>
+    
+            <section class="subscribe-section">
+                <h1>Suscríbete</h1>
+                <p>Disfruta de recibir notificaciones de descuentos y promociones especiales en nuestras habitaciones y servicios.</p>
+                <form method="POST" action="/subscribe">
+                    <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                    <button type="submit">Suscríbeme</button>
+                </form>
+            </section>
+    
+            <aside class="sidebar right">
+                <ul>
+                    <div class="link_pf">
+                        <a class="nav-link text-white" href="/preguntasfrecuentes">Preguntas Frecuentes</a>
+                    </div>
+                    <div class="link_html">
+                        <a class="nav-link text-white" href="/reglasdelhotel">Reglas del Hotel</a>
+                    </div>
+                    <div class="link_html">
+                        <a class="nav-link text-white" href="/ubicaciondelhotel">Ubicación</a>
+                    </div>
+                    <a class="nav-link text-white" href="/quejas">Quejas</a>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    </main>
+ <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

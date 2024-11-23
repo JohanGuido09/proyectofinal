@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa; 
+        }
+        h1 {
+            color: #8C1C13; 
+            margin-top: 20px;
+        }
+        table {
+            background-color: white;
+            border-collapse: collapse;
+        }
+        
+        table thead {
+            background-color: #8C1C13; 
+            color: white;
+            text-align: center;
+        }
+        td {
+            color: black;
+            text-align: center;
+        }
+        .btn-agregar {
+            background-color: #8C1C13;
+            color: white;
+            border: none;
+        }
+        .btn-agregar:hover {
+            background-color: #721010;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Lista de Empleados</h1>
+        <div class="text-end mb-3">
+        <a href="{{ url_for('agregar_empleado') }}" class="btn btn-agregar">Agregar Empleado</a>
+        </div>
+        <table class="table table-bordered table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Género</th>
+                    <th>Dirección</th>
+                    <th>Estado Civil</th>
+                    <th>Num INSS</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Cargo</th>
+                    <th>Salario</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for empleado in empleados %}
+                    <tr>
+                        <td>{{ empleado[0] }}</td>
+                        <td>{{ empleado[1] }}</td>
+                        <td>{{ empleado[2] }}</td>
+                        <td>{{ empleado[3] }}</td>
+                        <td>{{ empleado[4] }}</td>
+                        <td>{{ 'Masculino' if empleado[5] == 'M' else 'Femenino' }}</td>
+                        <td>{{ empleado[6] }}</td>
+                        <td>{{ empleado[7] }}</td>
+                        <td>{{ empleado[8] }}</td>
+                        <td>{{ empleado[9] }}</td>
+                        <td>{{ empleado[10] }}</td>
+                        <td>{{ empleado[11] }}</td>
+                        <td>{{ empleado[12] }}</td>
+                        <td>{{ empleado[13] }}</td>
+                        <td>
+                            <a href="{{ url_for('editar_empleado', id=empleado[0]) }}" class="btn btn-sm btn-primary">Editar</a>
+                            <form action="{{ url_for('eliminar_empleado_confirmado', id=empleado[0]) }}" method="POST" style="display: inline;">
+                                <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

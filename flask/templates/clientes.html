@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; 
+        }
+        h1 {
+            color: #8C1C13; 
+            margin-top: 20px;
+        }
+        table {
+            background-color: white;
+            border-collapse: collapse;
+        }
+        
+        table thead {
+            background-color: #8C1C13; 
+            color: white;
+            text-align: center;
+        }
+        td {
+            color: black;
+            text-align: center;
+        }
+        .btn-agregar {
+            background-color: #8C1C13;
+            color: white;
+            border: none;
+        }
+        .btn-agregar:hover {
+            background-color: #721010;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Registro de Clientes</h1>
+        <div class="text-end mb-3">
+            <!-- Botón para agregar cliente -->
+            <a href="{{ url_for('agregar_cliente') }}" class="btn btn-agregar">Agregar Cliente</a>
+        </div>
+        <table class="table table-bordered table-hover mt-4">
+            <thead>
+                <tr>
+                    <th>Num Cliente</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Género</th>
+                    <th>Nacionalidad</th>
+                    <th>Dirección</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cliente in clientes %}
+                <tr>
+                    <td>{{ cliente[0] }}</td> 
+                    <td>{{ cliente[1] }}</td>
+                    <td>{{ cliente[2] }}</td>
+                    <td>{{ cliente[3] }}</td>
+                    <td>{{ cliente[4] }}</td>
+                    <td>{{ cliente[5] }}</td> 
+                    <td>{{ cliente[6] }}</td>
+                    <td>{{ cliente[7] }}</td>
+                    <td>{{ cliente[8] }}</td>
+                    <td>{{ cliente[9] }}</td>
+                    <td>
+                        <a href="{{ url_for('editar_cliente', id=cliente[0]) }}" class="btn btn-sm btn-primary">Editar</a>
+                        <form action="{{ url_for('eliminar_cliente_confirmado', id=cliente[0]) }}" method="POST" style="display: inline;">
+                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function eliminarCliente(id) {
+            if (confirm("¿Está seguro de que desea eliminar este cliente?")) {
+                window.location.href = `/eliminar_cliente/${id}`;
+            }
+        }
+    </script>
+</body>
+</html>

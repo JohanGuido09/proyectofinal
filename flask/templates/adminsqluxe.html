@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='adminstyle.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="d-flex">
+        <nav class="bg-danger text-white p-3" id="sidebar">
+            <h3 class="text-white">SQLuxe Admin</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/clientes">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/empleados">Empleados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/habitacionesadmin">Habitaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/reservacionesadmin">Reservaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/quejas">Quejas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/suscriptores">Suscriptores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/logout">
+                        <button class="btn btn-outline-light w-100">Log Out</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid p-4">
+            <h1 class="text-danger">Dashboard</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- KPI Cards -->
+        <div class="col-md-4">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Reservas Activas</h5>
+                    <h2>125</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ingresos Mensuales</h5>
+                    <h2>$12,000</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ocupación</h5>
+                    <h2>85%</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Alert Panel -->
+    <div class="alert alert-warning" role="alert">
+        <strong>Mantenimiento pendiente:</strong> Habitación 203 debe ser revisada antes del 25 de noviembre.
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

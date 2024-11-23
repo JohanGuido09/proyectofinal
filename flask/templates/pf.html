@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pfstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <title>Preguntas Frecuentes - Hotel SQLuxe</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.JPG') }}" alt="Hotel SQLuxe">
+            <span>Hotel SQLUXE</span>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Habitaciones</a>
+        <a href="#">Contacto</a>
+    </nav>
+    </header>
+    <main>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h1>Preguntas frecuentes</h1>
+                <h2 class="faq-question">¿Cómo puedo hacer una reserva en línea?</h2>
+                <p class="faq-answer">Para hacer una reserva en línea, simplemente visita nuestro sitio web y dirígete a la sección de reservas. Selecciona las fechas deseadas, el número de huéspedes y el tipo de habitación que prefieres. Una vez que hayas ingresado esta información, podrás ver la disponibilidad y los precios. Después de elegir tu habitación, sigue las instrucciones para completar el proceso de reserva, que incluye proporcionar información de contacto y realizar el pago. Si necesitas ayuda, nuestro equipo de atención al cliente está disponible para asistirte en cualquier momento.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Qué métodos de pago aceptan?</h2>
+                <p class="faq-answer">Aceptamos una variedad de métodos de pago para facilitar tu experiencia de reserva. Puedes utilizar tarjetas de crédito como Visa, MasterCard y American Express. También aceptamos pagos mediante tarjetas de débito y plataformas de pago en línea como PayPal. Al momento de realizar tu reserva, se te ofrecerán todas las opciones disponibles. Si tienes un método de pago específico que deseas utilizar, no dudes en contactarnos para verificar su aceptación.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Puedo cancelar mi reserva?</h2>
+                <p class="faq-answer">Sí, puedes cancelar tu reserva. Nuestra política de cancelación permite cancelaciones sin cargo hasta 24 horas antes de la fecha de llegada. Si cancelas dentro de las 24 horas previas a tu llegada, es posible que se aplique un cargo equivalente a la primera noche de tu estancia. Te recomendamos que revises los términos y condiciones específicos de tu reserva, ya que pueden variar según la tarifa seleccionada. Para cancelar tu reserva, puedes hacerlo a través de nuestro sitio web o contactando directamente a nuestro equipo de atención al cliente.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Ofrecen desayuno incluido?</h2>
+                <p class="faq-answer">Sí, el desayuno está incluido en todas nuestras tarifas de habitación. Nuestro desayuno buffet se sirve diariamente en el restaurante del hotel y ofrece una variedad de opciones, incluyendo frutas frescas, panes, cereales, huevos, y una selección de bebidas. Nos esforzamos por ofrecer opciones saludables y deliciosas para todos nuestros huéspedes. Si tienes alguna restricción dietética, no dudes en informarnos y haremos nuestro mejor esfuerzo para acomodar tus necesidades.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Cuáles son los horarios de check-in y check-out?</h2>
+                <p class="faq-answer">El horario de check-in es a partir de las 15:00 horas y el check-out debe realizarse antes de las 11:00 horas. Si llegas antes de las 15:00 horas, puedes dejar tu equipaje en nuestra consigna mientras esperas a que tu habitación esté lista. Si necesitas un check-out más tarde, por favor consulta con la recepción, ya que podemos ofrecerte esta opción según la disponibilidad y con un cargo adicional. Nos esforzamos por hacer que tu estancia sea lo más cómoda posible.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Tienen servicio de transporte al aeropuerto?</h2>
+                <p class="faq-answer">Sí, ofrecemos un servicio de transporte al aeropuerto por un costo adicional. Este servicio está disponible bajo solicitud y se puede reservar al momento de hacer tu reserva o en el momento de tu check-in. Nuestro transporte es cómodo y seguro, y te llevará directamente a la terminal de tu vuelo. Si necesitas más información sobre horarios y tarifas, no dudes en contactarnos. También podemos ayudarte a coordinar el transporte de regreso al aeropuerto al final de tu estancia.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Puedo modificar mi reserva?</h2>
+                <p class="faq-answer">Sí, puedes modificar tu reserva en cualquier momento. Para hacerlo, simplemente accede a tu cuenta en nuestro sitio web o contacta a nuestro servicio al cliente. Ten en cuenta que las modificaciones están sujetas a disponibilidad y pueden implicar cambios en la tarifa. Si deseas cambiar las fechas de tu estancia o el tipo de habitación, haremos todo lo posible para acomodar tus solicitudes. Te recomendamos que realices cualquier modificación lo antes posible para garantizar la disponibilidad.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Tienen habitaciones accesibles para personas con discapacidad?</h2>
+                <p class="faq-answer">Sí, contamos con habitaciones accesibles diseñadas para satisfacer las necesidades de nuestros huéspedes con discapacidad. Estas habitaciones están equipadas con características especiales, como barras de apoyo, duchas accesibles y espacio adicional para maniobrar. Te recomendamos que nos informes sobre tus necesidades específicas al momento de hacer la reserva para asegurarnos de que tu estancia sea cómoda y sin inconvenientes.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Ofrecen servicios de spa?</h2>
+                <p class="faq-answer">Sí, en nuestro hotel ofrecemos una variedad de tratamientos de spa para que puedas relajarte y rejuvenecer durante tu estancia. Nuestro spa cuenta con terapeutas profesionales que ofrecen masajes, tratamientos faciales y otros servicios de bienestar. Te recomendamos que reserves tus tratamientos con anticipación, especialmente durante la temporada alta, para asegurarte de obtener la cita que deseas. También ofrecemos paquetes especiales que combinan alojamiento y tratamientos de spa.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Cuál es la política de mascotas?</h2>
+                <p class="faq-answer">Aceptamos mascotas en nuestro hotel bajo ciertas condiciones. Es importante que nos informes al momento de hacer la reserva si planeas traer a tu mascota. Puede aplicarse un cargo adicional por la estancia de tu mascota, y se requiere que se mantenga en un transportador o con correa en las áreas comunes. También te pedimos que respetes las normas del hotel para garantizar una estancia agradable para todos nuestros huéspedes. Si tienes preguntas específicas sobre nuestra política de mascotas, no dudes en contactarnos.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Tienen piscina?</h2>
+                <p class="faq-answer">Sí, contamos con una hermosa piscina al aire libre que está disponible para todos nuestros huéspedes. La piscina está rodeada de tumbonas y sombrillas, lo que la convierte en un lugar ideal para relajarse y disfrutar del sol. También ofrecemos toallas de piscina para tu comodidad. La piscina está abierta todos los días desde las 8:00 hasta las 20:00 horas. Te invitamos a disfrutar de un refrescante baño durante tu estancia.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Ofrecen Wi-Fi gratuito?</h2>
+                <p class="faq-answer">Sí, ofrecemos Wi-Fi gratuito en todas las áreas del hotel, incluyendo las habitaciones, el lobby y las zonas comunes. La conexión es rápida y confiable, lo que te permitirá mantenerte conectado durante tu estancia. Si tienes problemas para conectarte, nuestro personal de recepción estará encantado de ayudarte. También ofrecemos servicios de impresión y copiado en el centro de negocios del hotel.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Hay estacionamiento disponible?</h2>
+                <p class="faq-answer">Sí, ofrecemos estacionamiento gratuito para nuestros huéspedes, sujeto a disponibilidad. El estacionamiento está vigilado y es seguro, lo que te brinda tranquilidad durante tu estancia. Si llegas en coche, te recomendamos que llegues temprano para asegurarte de obtener un lugar. Si el estacionamiento está lleno, nuestro personal puede ayudarte a encontrar opciones cercanas.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Puedo solicitar una habitación con vista al mar?</h2>
+                <p class="faq-answer">Sí, puedes solicitar una habitación con vista al mar al momento de hacer tu reserva. Sin embargo, ten en cuenta que estas habitaciones están sujetas a disponibilidad. Haremos todo lo posible para cumplir con tu solicitud, ya que entendemos que una vista al mar puede mejorar tu experiencia. Si deseas asegurarte de tener una habitación con vista al mar, te recomendamos que reserves con anticipación, especialmente durante la temporada alta. No dudes en contactarnos si tienes alguna preferencia específica.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Tienen servicio de limpieza diario?</h2>
+                <p class="faq-answer">Sí, ofrecemos servicio de limpieza diario en todas nuestras habitaciones. Nuestro equipo de limpieza se asegura de que tu habitación esté siempre limpia y ordenada, proporcionando toallas frescas y reposición de artículos de tocador según sea necesario. Si prefieres no ser molestado durante el servicio de limpieza, puedes colocar el cartel de "No molestar" en la puerta. Si necesitas servicios adicionales, como limpieza a fondo o cambio de sábanas, no dudes en solicitarlo a nuestro personal.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Ofrecen actividades para niños?</h2>
+                <p class="faq-answer">Sí, contamos con un club infantil y una variedad de actividades supervisadas para niños. Nuestro objetivo es asegurarnos de que los más pequeños también disfruten de su estancia. Ofrecemos juegos, manualidades y actividades al aire libre, así como un área de juegos segura. Además, organizamos eventos especiales durante las vacaciones y fines de semana. Si deseas más información sobre las actividades disponibles durante tu estancia, no dudes en preguntar en la recepción.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Puedo hacer una reserva para un grupo grande?</h2>
+                <p class="faq-answer">Sí, ofrecemos tarifas especiales y opciones de alojamiento para grupos grandes. Si estás organizando un evento, como una boda, una reunión familiar o un viaje corporativo, te recomendamos que te pongas en contacto con nuestro equipo de ventas. Ellos podrán ayudarte a planificar tu estancia y ofrecerte opciones personalizadas que se ajusten a tus necesidades. También podemos coordinar servicios adicionales, como catering y actividades grupales.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Tienen restaurante en el hotel?</h2>
+                <p class="faq-answer">Sí, contamos con un restaurante en el hotel que ofrece una variedad de platos locales e internacionales. Nuestro chef utiliza ingredientes frescos y de alta calidad para crear menús deliciosos que satisfacen todos los gustos. El restaurante está abierto para desayuno, almuerzo y cena, y también ofrecemos servicio de habitaciones. Si tienes alguna restricción dietética o preferencia alimentaria, por favor háznoslo saber y haremos nuestro mejor esfuerzo para acomodarte.</p>
+            </div>
+            <div class="faq-item">
+                <h2 class="faq-question">¿Ofrecen servicio de habitaciones?</h2>
+                <p class="faq-answer">Sí, ofrecemos servicio de habitaciones las 24 horas del día. Puedes disfrutar de una selección de platos del menú del restaurante desde la comodidad de tu habitación. Nuestro servicio de habitaciones es rápido y eficiente, y estamos comprometidos a brindarte una experiencia de alta calidad. Si deseas realizar un pedido, simplemente consulta el menú en tu habitación y llama a la recepción para hacer tu pedido.</p>
+            </div>
+        </div>
+        <div class="subscribe-container">
+            <aside class="sidebar">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Servicios</li>
+                    <li>Nosotros</li>
+                    <li>Habitaciones</li>
+                    <li>Contacto</li>
+                </ul>
+                <div class="social-media">
+                    <img src="{{ url_for('static', filename='images/Facebook.png') }}" alt="fb">
+                    <img src="{{ url_for('static', filename='images/Youtube.png') }}" alt="yt">
+                    <img src="{{ url_for('static', filename='images/Whatsapp.png') }}" alt="whats">
+                </div>
+            </aside>
+    
+            <section class="subscribe-section">
+                <h1>Suscríbete</h1>
+                <p>Disfruta de recibir notificaciones de descuentos y promociones especiales en nuestras habitaciones y servicios.</p>
+                <form method="POST" action="/subscribe">
+                    <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                    <button type="submit">Suscríbeme</button>
+                </form>
+            </section>
+    
+            <aside class="sidebar right">
+                <ul>
+                    <div class="link_pf">
+                        <a class="nav-link text-white" href="/preguntasfrecuentes">Preguntas Frecuentes</a>
+                    </div>
+                    <div class="link_html">
+                        <a class="nav-link text-white" href="/reglasdelhotel">Reglas del Hotel</a>
+                    </div>
+                    <div class="link_html">
+                        <a class="nav-link text-white" href="/ubicaciondelhotel">Ubicación</a>
+                    </div>
+                    <a class="nav-link text-white" href="/quejas">Quejas</a>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

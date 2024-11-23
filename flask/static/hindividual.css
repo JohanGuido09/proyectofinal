@@ -1,0 +1,243 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background: #111;
+    color: #fff;
+    padding: 1.5em 0;
+    text-align: center;
+    position: relative;
+}
+
+.header .logo {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header nav {
+    margin-top: 10px;
+}
+
+.header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #ff5a5f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.room-detail h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.room-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thumbnail img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.room-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.room-info h3 {
+    margin-bottom: 10px;
+    color: #ff5a5f;
+}
+
+.room-info .price {
+    font-size: 2em;
+    color: #ff5a5f;
+    margin: 20px 0;
+}
+
+.btn-book {
+    background: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-book:hover {
+    background: #e04b50;
+    transform: scale(1.05);
+}
+
+.room-features {
+    margin-top: 30px;
+}
+
+.room-features h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.room-features ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.room-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 20px;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.sidebar {
+    width: 25%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.subscribe-section {
+    width: 50%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.subscribe-section h1 {
+    margin-bottom: 20px;
+    color: #ff5a5f;
+}
+
+.subscribe-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.subscribe-section button {
+    background: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-section button:hover {
+    background: #e04b50;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-media img {
+    width: 30px;
+    height: auto;
+}
+
+.right {
+    margin-left: 20px;
+}
+
+.link_pf, .link_html {
+    margin-bottom: 10px;
+}
+
+.link_html a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link_html a:hover {
+    color: #ff5a5f;
+}

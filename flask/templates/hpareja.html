@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Habitación para Parejas - Hotel Luxe</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='hsuite.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.JPG') }}" alt="Hotel SQLuxe">
+            <span>Hotel SQLUXE</span>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Habitaciones</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="room-detail">
+        <div class="container">
+            <h2>Habitación para Parejas</h2>
+            <div class="room-gallery">
+                <div class="main-image">
+                    <img src="{{ url_for('static', filename='images/pareja.jpeg') }}" alt=" ">
+                </div>
+                <div class="thumbnail-gallery">
+                    <div class="thumbnail">
+                        <img src="{{ url_for('static', filename='images/pareja1.jpg') }}" alt=" ">
+                        <img src="{{ url_for('static', filename='images/pareja2.jpg') }}" alt=" ">
+                    </div>
+                </div>
+            </div>
+            <div class="room-info">
+                <h3>Acerca de la habitación</h3>
+                <p>Disfruta de un espacio diseñado para compartir momentos inolvidables con tu ser querido. 
+                    Nuestra habitación para parejas combina elegancia y confort, ofreciendo una cama king size o matrimonial, 
+                    decoración moderna y acogedora, iluminación cálida y amenidades de lujo. Ideal para relajarse, 
+                    celebrar ocasiones especiales o simplemente escapar de la rutina, 
+                    este refugio íntimo te garantiza una experiencia única llena de comodidad y romance. 
+                    ¡Haz de tu estancia un recuerdo inolvidable!</p>
+                <h4 class="price">Reserva Ahora<br> <span></span> por Día</h4>
+                <button class="btn btn-book">¡Reservar Ahora!</button>
+            </div>
+            <div class="room-features">
+                <h3>Comodidades</h3>
+                
+            </div>
+        </div>
+    </main>
+
+    
+    <div class="subscribe-container">
+        <aside class="sidebar">
+            <ul>
+                <li>Inicio</li>
+                <li>Servicios</li>
+                <li>Nosotros</li>
+                <li>Habitaciones</li>
+                <li>Contacto</li>
+            </ul>
+            <div class="social-media">
+                <img src="{{ url_for('static', filename='images/Facebook.png') }}" alt="fb">
+                <img src="{{ url_for('static', filename='images/Youtube.png') }}" alt="yt">
+                <img src="{{ url_for('static', filename='images/Whatsapp.png') }}" alt="whats">
+            </div>
+        </aside>
+
+        <section class="subscribe-section">
+            <h1>Suscríbete</h1>
+            <p>Disfruta de recibir notificaciones de descuentos y promociones especiales en nuestras habitaciones y servicios.</p>
+            <form method="POST" action="/subscribe">
+                <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                <button type="submit">Suscríbeme</button>
+            </form>
+        </section>
+
+        <aside class="sidebar right">
+            <ul>
+                <div class="link_pf">
+                    <a href="pf.html">Preguntas Frecuentes</a>
+                </div>
+                <div class="link_html">
+                    <a href="rght.html">Reglas del Hotel</a>
+                </div>
+                <div class="link_html">
+                    <a href="uhl.html">Ubicación</a>
+                </div>
+            </ul>
+        </aside>
+    </div>
+</div>
+</body>
+</html>
